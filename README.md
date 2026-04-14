@@ -2,6 +2,17 @@
 
 Aplicación de demostración: listado de productos, PDP con galería, precios multinivel, variante por radios, acordeón, carrusel de relacionados, carrito en `localStorage`, SSR y analítica simulada (`dataLayer`).
 
+## Demo online
+
+> Ya está desplegado y disponible públicamente:
+
+- **App Engine (GCP):** [https://web-farmacias-dot-ancaor-tec.appspot.com/](https://web-farmacias-dot-ancaor-tec.appspot.com/)
+- **Dominio personalizado (DNS):** [http://farmacias.ancaor.com/](http://farmacias.ancaor.com/)
+
+![Estado](https://img.shields.io/badge/status-online-17a15b?style=flat-square)
+![Angular](https://img.shields.io/badge/angular-21-dd0031?style=flat-square)
+![Deploy](https://img.shields.io/badge/deploy-appengine-4285f4?style=flat-square)
+
 ## Nota personal de implementación
 
 Este proyecto lo trabajé con foco en 3 cosas: que se vea cercano al flujo real de ecommerce, que sea fácil de extender, y que sea rápido de entender por otro frontend.
