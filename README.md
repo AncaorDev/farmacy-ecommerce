@@ -7,7 +7,7 @@ Aplicación de demostración: listado de productos, PDP con galería, precios mu
 > Ya está desplegado y disponible públicamente:
 
 - **App Engine (GCP):** [https://web-farmacias-dot-ancaor-tec.appspot.com/](https://web-farmacias-dot-ancaor-tec.appspot.com/)
-- **Dominio personalizado (DNS):** [http://farmacias.ancaor.com/](http://farmacias.ancaor.com/)
+- **Dominio personalizado (DNS):** [https://farmacias.ancaor.com/](https://farmacias.ancaor.com/)
 
 ![Estado](https://img.shields.io/badge/status-online-17a15b?style=flat-square)
 ![Angular](https://img.shields.io/badge/angular-21-dd0031?style=flat-square)
