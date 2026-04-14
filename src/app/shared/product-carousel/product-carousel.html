@@ -1,0 +1,19 @@
+<section class="carousel" aria-labelledby="carousel-title">
+  <div class="head">
+    <h2 id="carousel-title" class="title">{{ title }}</h2>
+    <div class="nav">
+      <button type="button" class="nav-btn" (click)="prev()" aria-label="Anterior">&#8249;</button>
+      <button type="button" class="nav-btn" (click)="next()" aria-label="Siguiente">&#8250;</button>
+    </div>
+  </div>
+
+  <div class="track-wrap">
+    <div #track class="track" role="list">
+      @for (p of products; track p.id) {
+        <div class="slide" role="listitem">
+          <app-product-card [product]="p" mode="carousel" />
+        </div>
+      }
+    </div>
+  </div>
+</section>

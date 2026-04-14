@@ -1,0 +1,103 @@
+<section class="cart-page">
+  <div class="inner">
+    <h1 class="title">Mi carrito</h1>
+
+    @if (!lines().length) {
+      <div class="empty">
+        <p>Tu carrito está vacío.</p>
+        <a class="btn-back" routerLink="/">Volver al catálogo</a>
+      </div>
+    } @else {
+      <div class="layout">
+        <article class="panel lines-panel">
+          <header class="table-head">
+            <span>Productos</span>
+            <span>Presentación</span>
+            <span>Cantidad</span>
+            <span>Sub total</span>
+          </header>
+
+          <div class="rows">
+            @for (line of lines(); track line.productId + '-' + line.variantId) {
+              <div class="row">
+                <div class="prod">
+                  <a [routerLink]="['/productos', line.slug]" class="img-link">
+                    <img [src]="line.image" [alt]="line.productName" width="64" height="64" />
+                  </a>
+                  <div class="meta">
+                    <a class="name" [routerLink]="['/productos', line.slug]">{{ line.productName }}</a>
+                    <span class="sku">{{ line.currency }}</span>
+                  </div>
+                </div>
+
+                <div class="variant">{{ line.variantLabel }}</div>
+
+                <div class="qty-control" aria-label="Control de cantidad">
+                  <button
+                    type="button"
+                    class="qty-btn"
+                    (click)="line.quantity === 1 ? remove(line.productId, line.variantId) : decrease(line.productId, line.variantId)"
+                    [attr.aria-label]="line.quantity === 1 ? 'Eliminar producto' : 'Disminuir cantidad'"
+                  >
+                    @if (line.quantity === 1) {
+                      <svg
+                        class="qty-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M4 7H20M9 7V5C9 4.44772 9.44772 4 10 4H14C14.5523 4 15 4.44772 15 5V7M7 7L8 19C8.0458 19.5523 8.50736 20 9.06103 20H14.939C15.4926 20 15.9542 19.5523 16 19L17 7M10 11V16M14 11V16"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    } @else {
+                      <span class="qty-symbol">−</span>
+                    }
+                  </button>
+                  <span class="qty-value">{{ line.quantity }}</span>
+                  <button
+                    type="button"
+                    class="qty-btn"
+                    (click)="increase(line.productId, line.variantId)"
+                    aria-label="Aumentar cantidad"
+                  >
+                    +
+                  </button>
+                </div>
+
+                <div class="subtotal">
+                  <strong>S/ {{ line.unitPrice * line.quantity | number: '1.2-2' }}</strong>
+                  <button
+                    type="button"
+                    class="remove-link"
+                    (click)="remove(line.productId, line.variantId)"
+                  >
+                    Eliminar
+                  </button>
+                </div>
+              </div>
+            }
+          </div>
+        </article>
+
+        <aside class="panel summary">
+          <h2>Resumen de compra</h2>
+          <dl>
+            <div><dt>Subtotal</dt><dd>S/ {{ subtotal() | number: '1.2-2' }}</dd></div>
+            <div><dt>Total a pagar</dt><dd>S/ {{ total() | number: '1.2-2' }}</dd></div>
+            <div class="card-row">
+              <dt>Exclusivo con tarjeta</dt>
+              <dd>S/ {{ totalCard() | number: '1.2-2' }}</dd>
+            </div>
+          </dl>
+          <button type="button" class="checkout-btn">Ir a comprar</button>
+        </aside>
+      </div>
+    }
+  </div>
+</section>

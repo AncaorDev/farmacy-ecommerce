@@ -1,0 +1,24 @@
+.err {
+  max-width: var(--ef-max);
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  border: 1px solid #ffcdd2;
+  background: #ffebee;
+  border-radius: var(--ef-radius);
+}
+
+.msg {
+  margin: 0 0 1rem;
+  color: #b71c1c;
+}
+
+.btn {
+  border: 0;
+  border-radius: var(--ef-radius-pill);
+  padding: 0.5rem 1.25rem;
+  background: var(--ef-brand-green-light);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.page {
+  padding: 1.5rem 0 3rem;
+}
+
+.inner {
+  max-width: var(--ef-max);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  color: var(--ef-brand-green);
+}
+
+.sub {
+  margin: 0 0 1.5rem;
+  color: var(--ef-text-muted);
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.cell {
+  display: flex;
+}
+
+.empty {
+  border: 1px dashed var(--ef-border);
+  border-radius: var(--ef-radius);
+  padding: 1rem;
+  color: var(--ef-text-muted);
+  background: #fff;
+}

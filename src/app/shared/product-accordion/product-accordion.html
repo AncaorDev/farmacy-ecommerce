@@ -1,0 +1,27 @@
+<section class="acc" aria-label="Información detallada del producto">
+  @for (s of sections; track s.id) {
+    <div class="panel">
+      <h2 class="panel-title">
+        <button
+          type="button"
+          class="panel-btn"
+          [attr.aria-expanded]="isOpen(s.id)"
+          (click)="toggle(s.id)"
+          [id]="'acc-h-' + s.id"
+        >
+          {{ s.title }}
+          <span class="chev" aria-hidden="true">{{ isOpen(s.id) ? '−' : '+' }}</span>
+        </button>
+      </h2>
+      @if (isOpen(s.id)) {
+        <div
+          class="panel-body"
+          role="region"
+          [attr.aria-labelledby]="'acc-h-' + s.id"
+        >
+          <p>{{ s.content }}</p>
+        </div>
+      }
+    </div>
+  }
+</section>

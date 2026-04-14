@@ -1,0 +1,131 @@
+@if (loading()) {
+  <app-loading-state />
+} @else if (error()) {
+  <app-error-state [message]="error()!" (retry)="retry()" />
+} @else if (product(); as p) {
+  <article class="pdp">
+    <div class="inner">
+      <app-breadcrumbs [items]="p.breadcrumbs" />
+
+      <div class="hero">
+        <div class="gallery-wrap">
+          <app-image-gallery
+            [images]="displayImages()"
+            [alt]="p.name"
+            [priority]="true"
+          >
+            <div class="overlays" aria-hidden="true">
+              @if (p.primaryPresentationLabel) {
+                <span class="pill pill-t">{{ p.primaryPresentationLabel }}</span>
+              }
+              <span class="pill pill-v">ANTIGRIPAL</span>
+              @if (p.packBadge) {
+                <span class="pill pill-b">{{ p.packBadge }}</span>
+              }
+            </div>
+          </app-image-gallery>
+        </div>
+
+        <div class="buy">
+          <div class="top-meta">
+            <p class="presentation-top">
+              {{ (selectedVariant()?.label ?? p.primaryPresentationLabel ?? 'Presentación') + ' 1 UN' }}
+            </p>
+            <p class="sku">SKU {{ p.sku }}</p>
+          </div>
+          <h1 class="name">{{ p.name }}</h1>
+
+          <app-product-price-stack [product]="p" />
+
+          <div class="short" [class.expanded]="descExpanded()">
+            <p>{{ p.shortDescription }}</p>
+            <button type="button" class="linkish" (click)="toggleDesc()">
+              {{ descExpanded() ? 'Ver menos' : 'Ver más' }}
+            </button>
+          </div>
+
+          <fieldset class="variants">
+            <legend class="legend">Presentación</legend>
+            @for (v of p.variants; track v.id) {
+              <label class="radio">
+                <input
+                  type="radio"
+                  [attr.name]="'variant-' + p.id"
+                  [checked]="selectedVariantId() === v.id"
+                  (change)="selectVariant(v)"
+                />
+                <span class="radio-body">
+                  <span class="radio-label">{{ v.label }}</span>
+                  <span class="radio-price">Desde {{ v.fromPrice | number: '1.2-2' }} {{ p.currency }}</span>
+                </span>
+              </label>
+            }
+          </fieldset>
+
+          <div class="cta-row">
+            @if (selectedVariantQuantity() === 0) {
+              <button type="button" class="btn-cart" (click)="addToCart()">Agregar al carrito</button>
+            } @else {
+              <div class="qty-control" aria-label="Control de cantidad en carrito">
+                <button
+                  type="button"
+                  class="qty-btn"
+                  (click)="decreaseQuantity()"
+                  [attr.aria-label]="selectedVariantQuantity() === 1 ? 'Eliminar producto del carrito' : 'Disminuir cantidad'"
+                >
+                  @if (selectedVariantQuantity() === 1) {
+                    <svg
+                      class="qty-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M4 7H20M9 7V5C9 4.44772 9.44772 4 10 4H14C14.5523 4 15 4.44772 15 5V7M7 7L8 19C8.0458 19.5523 8.50736 20 9.06103 20H14.939C15.4926 20 15.9542 19.5523 16 19L17 7M10 11V16M14 11V16"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  } @else {
+                    <span class="qty-symbol">−</span>
+                  }
+                </button>
+                <span class="qty-value">{{ selectedVariantQuantity() }}</span>
+                <button
+                  type="button"
+                  class="qty-btn"
+                  (click)="increaseQuantity()"
+                  aria-label="Aumentar cantidad"
+                >
+                  +
+                </button>
+              </div>
+            }
+            <button
+              type="button"
+              class="btn-wish"
+              [class.on]="wish()"
+              (click)="toggleWish()"
+              [attr.aria-pressed]="wish()"
+              aria-label="Lista de deseos"
+            >
+              <img src="/images/icons/heart.svg" class="wish-icon" alt="" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="acc-wrap" aria-labelledby="det-title">
+        <h2 id="det-title" class="sr-only">Detalle del producto</h2>
+        <app-product-accordion [sections]="p.accordionSections" />
+      </section>
+
+      @if (related().length) {
+        <app-product-carousel title="Lo más buscado" [products]="related()" />
+      }
+    </div>
+  </article>
+}

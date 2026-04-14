@@ -1,0 +1,73 @@
+<article class="card" [class.carousel]="mode === 'carousel'">
+  @if (product.promoBadge) {
+    <div class="ribbon">{{ product.promoBadge }}</div>
+  }
+
+  <a [routerLink]="['/productos', product.slug]" class="media">
+    <img
+      [src]="product.thumbnail ?? product.images[0]"
+      width="280"
+      height="350"
+      [attr.alt]="product.name"
+      loading="lazy"
+      decoding="async"
+    />
+  </a>
+
+  <div class="body">
+    <a [routerLink]="['/productos', product.slug]" class="title">{{ product.name }}</a>
+    <div class="brand">Inkafarma</div>
+
+    <div class="prices-mini">
+      <span class="reg">{{ product.priceRegular | number: '1.2-2' }}</span>
+      @if (product.pricePromo != null) {
+        <span class="promo">{{ product.pricePromo | number: '1.2-2' }}</span>
+      }
+      @if (product.priceCardExclusive != null) {
+        <span class="cardp">{{ product.priceCardExclusive | number: '1.2-2' }} tarj.</span>
+      }
+    </div>
+
+    <div class="actions">
+      @if (quantity() === 0) {
+        <button type="button" class="btn-add" (click)="add($event)">Agregar al carrito</button>
+      } @else {
+        <div class="qty-control" aria-label="Control de cantidad en carrito">
+          <button
+            type="button"
+            class="qty-btn"
+            (click)="decrease($event)"
+            [attr.aria-label]="quantity() === 1 ? 'Eliminar producto del carrito' : 'Disminuir cantidad'"
+          >
+            @if (quantity() === 1) {
+              <svg
+                class="qty-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 7H20M9 7V5C9 4.44772 9.44772 4 10 4H14C14.5523 4 15 4.44772 15 5V7M7 7L8 19C8.0458 19.5523 8.50736 20 9.06103 20H14.939C15.4926 20 15.9542 19.5523 16 19L17 7M10 11V16M14 11V16"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            } @else {
+              <span class="qty-symbol">−</span>
+            }
+          </button>
+          <span class="qty-value">{{ quantity() }}</span>
+          <button type="button" class="qty-btn" (click)="increase($event)" aria-label="Aumentar cantidad">
+            +
+          </button>
+        </div>
+      }
+      <button type="button" class="btn-wish" aria-label="Favoritos">
+        <img src="/images/icons/heart.svg" class="wish-icon" alt="" aria-hidden="true" />
+      </button>
+    </div>
+  </div>
+</article>

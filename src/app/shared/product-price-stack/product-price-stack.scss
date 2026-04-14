@@ -1,0 +1,100 @@
+.prices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.label {
+  color: #50566a;
+  font-size: 14px;
+}
+
+.value {
+  justify-self: end;
+  font-weight: 700;
+  color: #2f3855;
+  font-size: 14px;
+}
+
+.value.strike {
+  color: #80879c;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.promo .value,
+.promo {
+  color: #2f3855;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 7px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.badge-dark {
+  background: #222;
+  color: #fff;
+}
+
+.badge-blue {
+  background: #1976d2;
+  color: #fff;
+}
+
+.card-icons {
+  display: inline-flex;
+  gap: 4px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.card-chip {
+  display: inline-grid;
+  place-items: center;
+  min-width: 25px;
+  height: 18px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: lowercase;
+}
+
+.card-chip-dark {
+  background: #0e111b;
+  color: #fff;
+}
+
+.card-chip-blue {
+  background: #56b1e8;
+  color: #fff;
+}
+
+.card {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .value {
+    justify-self: start;
+  }
+}

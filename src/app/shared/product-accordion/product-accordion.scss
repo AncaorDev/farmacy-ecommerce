@@ -1,0 +1,49 @@
+.acc {
+  border: 1px solid var(--ef-border);
+  border-radius: var(--ef-radius);
+  overflow: hidden;
+  background: #fff;
+}
+
+.panel + .panel {
+  border-top: 1px solid var(--ef-border);
+}
+
+.panel-title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.panel-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border: 0;
+  background: #fafafa;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.panel-btn:hover {
+  background: #f0f0f0;
+}
+
+.panel-body {
+  padding: 0 1.25rem 1rem;
+  color: var(--ef-text-muted);
+  font-size: 0.9375rem;
+}
+
+.panel-body p {
+  margin: 0;
+}
+
+.chev {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1;
+}

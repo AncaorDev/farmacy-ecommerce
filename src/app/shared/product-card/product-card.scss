@@ -1,0 +1,191 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ef-border);
+  border-radius: var(--ef-radius);
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+  box-shadow: var(--ef-shadow);
+}
+
+.ribbon {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.5rem;
+  z-index: 1;
+  background: #c62828;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.25rem 0.4rem;
+  max-width: 70%;
+  line-height: 1.2;
+}
+
+.media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  aspect-ratio: 1 / 1;
+  padding: 0.5rem;
+  border-bottom: 1px solid #f0f2f7;
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.body {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ef-text);
+  text-decoration: none;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(1.35em * 3);
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.brand {
+  font-size: 0.75rem;
+  color: var(--ef-brand-green-light);
+  font-weight: 700;
+}
+
+.prices-mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  font-size: 0.8125rem;
+  align-items: baseline;
+  min-height: 1.5rem;
+}
+
+.reg {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.promo {
+  font-weight: 700;
+  color: var(--ef-text);
+}
+
+.cardp {
+  color: var(--ef-brand-blue);
+  font-weight: 600;
+}
+
+.actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.btn-add {
+  flex: 1;
+  border: 0;
+  border-radius: var(--ef-radius-pill);
+  padding: 0.5rem 0.75rem;
+  background: var(--ef-brand-green-light);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.8125rem;
+}
+
+.btn-add:hover {
+  filter: brightness(0.95);
+}
+
+.qty-control {
+  flex: 1;
+  min-height: 36px;
+  border: 1px solid #d9dde8;
+  border-radius: var(--ef-radius-pill);
+  padding: 0 0.5rem;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #23335b;
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.qty-btn:hover {
+  background: #f2f5fb;
+}
+
+.qty-icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+  margin: 0 auto;
+}
+
+.qty-symbol {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.qty-value {
+  min-width: 1rem;
+  text-align: center;
+  color: #23335b;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.btn-wish {
+  border: 1px solid var(--ef-border);
+  background: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: inline-grid;
+  place-items: center;
+}
+
+.wish-icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.carousel .media img {
+  max-height: none;
+  object-fit: contain;
+}

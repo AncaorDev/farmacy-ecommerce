@@ -1,0 +1,32 @@
+<section class="page" aria-labelledby="list-title">
+  @if (loading()) {
+    <app-loading-state />
+  } @else if (error()) {
+    <app-error-state [message]="error()!" (retry)="retry()" />
+  } @else {
+    <div class="inner">
+      <h1 id="list-title" class="title">Productos</h1>
+      @if (searchTerm()) {
+        <p class="sub">
+          Resultados para "<strong>{{ searchTerm() }}</strong>" ({{ filteredProducts().length }})
+        </p>
+      } @else {
+        <p class="sub">Catálogo de demostración — datos mock locales.</p>
+      }
+
+      @if (filteredProducts().length) {
+        <ul class="grid">
+          @for (p of filteredProducts(); track p.id) {
+            <li class="cell">
+              <app-product-card [product]="p" />
+            </li>
+          }
+        </ul>
+      } @else {
+        <div class="empty">
+          <p>No encontramos productos con ese criterio de búsqueda.</p>
+        </div>
+      }
+    </div>
+  }
+</section>

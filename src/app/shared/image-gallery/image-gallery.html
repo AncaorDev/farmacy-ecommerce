@@ -1,0 +1,40 @@
+<div class="gallery" [class.single]="images.length <= 1">
+  @if (images.length > 1) {
+    <div class="thumbs" role="tablist" aria-label="Miniaturas del producto">
+      @for (src of images; track $index) {
+        <button
+          type="button"
+          class="thumb"
+          [class.active]="active() === $index"
+          (click)="select($index)"
+          [attr.aria-selected]="active() === $index"
+          role="tab"
+        >
+          <img
+            [src]="thumbSrc(src)"
+            width="72"
+            height="90"
+            [alt]="alt + ' vista ' + ($index + 1)"
+            loading="lazy"
+            decoding="async"
+            (error)="onThumbError($event)"
+          />
+        </button>
+      }
+    </div>
+  }
+
+  <div class="main" [class.with-badge]="true">
+    <img
+      [src]="activeSrc()"
+      width="400"
+      height="500"
+      [alt]="alt"
+      class="hero"
+      loading="eager"
+      decoding="async"
+      (error)="onMainError($event)"
+    />
+    <ng-content />
+  </div>
+</div>

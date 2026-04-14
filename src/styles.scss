@@ -1,0 +1,66 @@
+:root {
+  --ef-brand-green: #1b5e20;
+  --ef-brand-green-light: #28a745;
+  --ef-brand-blue: #1565c0;
+  --ef-banner-start: #2e7d32;
+  --ef-banner-end: #1565c0;
+  --ef-text: #333333;
+  --ef-text-muted: #666666;
+  --ef-bg: #ffffff;
+  --ef-bg-soft: #f8f9fa;
+  --ef-footer-bar: #f1f1f1;
+  --ef-border: #e0e0e0;
+  --ef-radius: 12px;
+  --ef-radius-pill: 999px;
+  --ef-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --ef-max: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 15px;
+  color: var(--ef-text);
+  background: var(--ef-bg);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

@@ -1,0 +1,50 @@
+<header class="header">
+  <div class="inner">
+    <a routerLink="/" class="logo" aria-label="Inkafarma inicio">
+      <img
+        src="/images/logo.png"
+        width="182"
+        height="42"
+        alt="Inkafarma"
+        class="logo-img"
+      />
+    </a>
+
+    <form class="search" role="search" (submit)="$event.preventDefault(); submitSearch()">
+      <label class="sr-only" for="global-search">Buscar</label>
+      <input
+        id="global-search"
+        type="search"
+        name="q"
+        placeholder="Busca una marca o producto"
+        autocomplete="off"
+        [value]="searchTerm()"
+        (input)="onSearchInput(($any($event.target).value ?? '').toString())"
+      />
+      <button type="submit" class="search-btn" aria-label="Buscar">
+        <img src="/images/icons/search.svg" class="icon icon-search" alt="" aria-hidden="true" />
+      </button>
+    </form>
+
+    <a routerLink="/carrito" class="cart" aria-label="Carrito de compras">
+      <svg
+        class="icon icon-cart"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          d="M3 3H5L7.4 14.2C7.5 14.7 7.9 15 8.4 15H17.6C18.1 15 18.5 14.7 18.6 14.2L20 8H6"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle cx="9" cy="19" r="1.5" stroke="currentColor" stroke-width="1.8" />
+        <circle cx="17" cy="19" r="1.5" stroke="currentColor" stroke-width="1.8" />
+      </svg>
+      <span class="cart-count">{{ cart.totalItems() }}</span>
+    </a>
+  </div>
+</header>

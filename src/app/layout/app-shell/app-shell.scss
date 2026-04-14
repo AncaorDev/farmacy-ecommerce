@@ -1,0 +1,16 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+}
+
+.footer-placeholder {
+  min-height: 220px;
+  background: var(--ef-bg-soft);
+  border-top: 1px solid #edf1f4;
+}

@@ -1,0 +1,13 @@
+<div class="shell">
+  <app-top-banner />
+  <app-app-header />
+  <app-main-nav />
+  <main class="main">
+    <router-outlet />
+  </main>
+  @defer (on viewport) {
+    <app-app-footer />
+  } @placeholder {
+    <footer class="footer-placeholder" aria-hidden="true"></footer>
+  }
+</div>

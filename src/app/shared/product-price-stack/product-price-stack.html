@@ -1,0 +1,36 @@
+<div class="prices">
+  <div class="row">
+    <span class="label">Precio regular</span>
+    <span class="value" [class.strike]="product.pricePromo != null">
+      S/ {{ product.priceRegular | number: '1.2-2' }}
+    </span>
+  </div>
+
+  @if (product.pricePromo != null) {
+    <div class="row">
+      <span class="label">Precio promocional</span>
+      <span class="value promo">
+        S/ {{ product.pricePromo | number: '1.2-2' }}
+        @if (product.promoDiscountPercent != null) {
+          <span class="badge badge-dark">-{{ product.promoDiscountPercent }}%</span>
+        }
+      </span>
+    </div>
+  }
+
+  @if (product.priceCardExclusive != null) {
+    <div class="row">
+      <span class="label">Exclusivo con tarjeta</span>
+      <span class="value card">
+        <span class="card-icons" aria-hidden="true" title="Tarjetas participantes">
+          <span class="card-chip card-chip-dark">sip</span>
+          <span class="card-chip card-chip-blue">sip</span>
+        </span>
+        <span>S/ {{ product.priceCardExclusive | number: '1.2-2' }}</span>
+        @if (product.cardDiscountPercent != null) {
+          <span class="badge badge-blue">-{{ product.cardDiscountPercent }}%</span>
+        }
+      </span>
+    </div>
+  }
+</div>

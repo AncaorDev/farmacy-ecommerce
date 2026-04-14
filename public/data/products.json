@@ -1,0 +1,306 @@
+{
+  "products": [
+    {
+      "id": "p1",
+      "slug": "pharamol-antigripal-500mg",
+      "name": "Pharamol Antigripal 500 mg + 5 mg + 2 mg Tableta Recubierta",
+      "sku": "123456",
+      "currency": "PEN",
+      "breadcrumbs": [
+        { "label": "Inicio", "path": "/" },
+        { "label": "Farmacia", "path": "/" },
+        { "label": "Gripe" }
+      ],
+      "priceRegular": 89.9,
+      "pricePromo": 85.4,
+      "promoDiscountPercent": 5,
+      "priceCardExclusive": 71.92,
+      "cardDiscountPercent": 20,
+      "shortDescription": "Alivio de síntomas gripales. Contiene paracetamol, fenilefrina y clorfenamina. Uso oral según indicación médica.",
+      "thumbnail": "/images/033340L.png",
+      "primaryPresentationLabel": "Tabletas",
+      "packBadge": "50 SOBRES x2 TABS",
+      "accordionSections": [
+        {
+          "id": "desc",
+          "title": "Descripción larga",
+          "content": "Este producto es distribuido por Inretail Pharma S.A. (Ley 32033). Indicado para el alivio temporal de congestión nasal, dolor de cabeza y fiebre asociados al resfriado común."
+        },
+        {
+          "id": "comp",
+          "title": "Composición",
+          "content": "Paracetamol 500 mg, clorfenamina maleato 2 mg, fenilefrina clorhidrato 5 mg por tableta recubierta."
+        },
+        {
+          "id": "contra",
+          "title": "Contraindicaciones",
+          "content": "Hipersensibilidad a los componentes. No administrar con inhibidores de MAO. Consulte siempre a su médico."
+        }
+      ],
+      "images": [
+        "/images/033340L.png",
+        "/images/033340-2L.png",
+        "/images/033340-3L.png"
+      ],
+      "variants": [
+        {
+          "id": "v-sobre",
+          "label": "Sobre",
+          "fromPrice": 89.9,
+          "images": ["/images/033340L.png", "/images/033340-2L.png", "/images/033340-3L.png"]
+        },
+        {
+          "id": "v-caja",
+          "label": "Caja",
+          "fromPrice": 120.0,
+          "images": ["/images/033340L.png", "/images/033340-2L.png", "/images/033340-3L.png"]
+        }
+      ],
+      "relatedProductIds": ["p2", "p3", "p4", "p6"]
+    },
+    {
+      "id": "p2",
+      "slug": "toallitas-huggies-80",
+      "name": "Toallitas Húmedas Huggies Limpieza Cotidiana - Bolsa 80 UN",
+      "sku": "778812",
+      "currency": "PEN",
+      "breadcrumbs": [
+        { "label": "Inicio", "path": "/" },
+        { "label": "Infantil", "path": "/" },
+        { "label": "Higiene" }
+      ],
+      "priceRegular": 24.9,
+      "pricePromo": 18.9,
+      "promoDiscountPercent": 24,
+      "priceCardExclusive": 16.9,
+      "cardDiscountPercent": 32,
+      "shortDescription": "Toallitas hipoalergénicas para la piel delicada del bebé.",
+      "thumbnail": "/images/037902L.png",
+      "accordionSections": [
+        {
+          "id": "desc",
+          "title": "Descripción larga",
+          "content": "Texto extendido de ejemplo para el challenge."
+        },
+        {
+          "id": "comp",
+          "title": "Composición",
+          "content": "Material no tejido, solución limpiadora."
+        },
+        {
+          "id": "contra",
+          "title": "Contraindicaciones",
+          "content": "No ingerir. Mantener fuera del alcance de niños."
+        }
+      ],
+      "images": [
+        "/images/037902L.png",
+        "/images/037902-5L.png",
+        "/images/037902-3L.png"
+      ],
+      "variants": [
+        {
+          "id": "v80",
+          "label": "Bolsa 80 UN",
+          "fromPrice": 24.9,
+          "images": [
+            "/images/037902L.png",
+            "/images/037902-5L.png",
+            "/images/037902-3L.png"
+          ]
+        },
+        { "id": "v120", "label": "Bolsa 120 UN", "fromPrice": 32.9 }
+      ],
+      "relatedProductIds": ["p1", "p3", "p4", "p6"],
+      "promoBadge": "LLÉVATE EL 2DO A MITAD DE PRECIO"
+    },
+    {
+      "id": "p3",
+      "slug": "vitamina-c-efervescente",
+      "name": "Vitamina C 1000 mg Efervescente 20 tabletas",
+      "sku": "445001",
+      "currency": "PEN",
+      "breadcrumbs": [
+        { "label": "Inicio", "path": "/" },
+        { "label": "Bienestar", "path": "/" },
+        { "label": "Vitaminas" }
+      ],
+      "priceRegular": 35.5,
+      "pricePromo": 29.9,
+      "promoDiscountPercent": 16,
+      "shortDescription": "Apoyo al sistema inmune. Sabor naranja.",
+      "thumbnail": "/images/025763L.png",
+      "accordionSections": [
+        {
+          "id": "desc",
+          "title": "Descripción larga",
+          "content": "Suplemento dietético con vitamina C en forma efervescente."
+        },
+        {
+          "id": "comp",
+          "title": "Composición",
+          "content": "Ácido ascórbico 1000 mg por tableta."
+        },
+        {
+          "id": "contra",
+          "title": "Contraindicaciones",
+          "content": "Consulte en caso de embarazo o lactancia."
+        }
+      ],
+      "images": ["/images/025763L.png"],
+      "variants": [
+        {
+          "id": "v20",
+          "label": "20 tabletas",
+          "fromPrice": 35.5,
+          "images": ["/images/025763L.png"]
+        },
+        { "id": "v40", "label": "40 tabletas", "fromPrice": 62.0 }
+      ],
+      "relatedProductIds": ["p1", "p2", "p4", "p6"]
+    },
+    {
+      "id": "p4",
+      "slug": "protector-solar-fps50",
+      "name": "Protector solar facial FPS 50+ 50 ml",
+      "sku": "992200",
+      "currency": "PEN",
+      "breadcrumbs": [
+        { "label": "Inicio", "path": "/" },
+        { "label": "Dermocosmética", "path": "/" },
+        { "label": "Fotoprotección" }
+      ],
+      "priceRegular": 79.0,
+      "shortDescription": "Protección UVA/UVB. Textura ligera.",
+      "thumbnail": "/images/065651L.png",
+      "accordionSections": [
+        {
+          "id": "desc",
+          "title": "Descripción larga",
+          "content": "Protector de amplio espectro para uso diario."
+        },
+        {
+          "id": "comp",
+          "title": "Composición",
+          "content": "Filtros orgánicos e inorgánicos. Sin parabenos."
+        },
+        {
+          "id": "contra",
+          "title": "Contraindicaciones",
+          "content": "Evitar contacto con ojos."
+        }
+      ],
+      "images": ["/images/065651L.png", "/images/065651-2L.png", "/images/065651-3L.png"],
+      "variants": [
+        {
+          "id": "v50",
+          "label": "50 ml",
+          "fromPrice": 79.0,
+          "images": ["/images/065651L.png", "/images/065651-2L.png", "/images/065651-3L.png"]
+        },
+        { "id": "v100", "label": "100 ml", "fromPrice": 129.0 }
+      ],
+      "relatedProductIds": ["p1", "p2", "p3", "p6"]
+    },
+    {
+      "id": "p6",
+      "slug": "effaclar-serum-ultra-concentre-30ml",
+      "name": "Sérum Anti-imperfecciones La Roche-Posay Effaclar Duo+",
+      "sku": "033341",
+      "currency": "PEN",
+      "breadcrumbs": [
+        { "label": "Inicio", "path": "/" },
+        { "label": "Dermocosmética", "path": "/" },
+        { "label": "Sérums" }
+      ],
+      "priceRegular": 204.9,
+      "pricePromo": 163.9,
+      "promoDiscountPercent": 20,
+      "priceCardExclusive": 155.9,
+      "cardDiscountPercent": 24,
+      "shortDescription": "Acción anti-imperfecciones. Desobstruye poros y reduce puntos negros. Fórmula ligera, no grasa.",
+      "thumbnail": "/images/033341L.jpg",
+      "accordionSections": [
+        {
+          "id": "desc",
+          "title": "Descripción larga",
+          "content": "Effaclar Serum Ultra Concentré para piel grasa con tendencia acneica. Ayuda a reducir imperfecciones y marcas visibles."
+        },
+        {
+          "id": "comp",
+          "title": "Composición",
+          "content": "Ácido glicólico, LHA y ácido salicílico. Fórmula de uso nocturno."
+        },
+        {
+          "id": "contra",
+          "title": "Contraindicaciones",
+          "content": "Evitar el contorno de los ojos. Usar protector solar durante el día."
+        }
+      ],
+      "images": [
+        "/images/033341L.jpg",
+        "/images/033341-2L.jpg",
+        "/images/033341-3L.jpg",
+        "/images/033341-4X.jpg"
+      ],
+      "variants": [
+        {
+          "id": "v-frasco-30",
+          "label": "Frasco 30 ML",
+          "fromPrice": 163.9,
+          "images": [
+            "/images/033341L.jpg",
+            "/images/033341-2L.jpg",
+            "/images/033341-3L.jpg",
+            "/images/033341-4X.jpg"
+          ]
+        }
+      ],
+      "relatedProductIds": ["p1", "p2", "p3", "p4"]
+    },
+    {
+      "id": "p7",
+      "slug": "amoxicilina-bromhexina-nf-500mg-8mg",
+      "name": "Amoxicilina + Bromhexina NF 500mg + 8 mg Cápsula",
+      "sku": "071462",
+      "currency": "PEN",
+      "breadcrumbs": [
+        { "label": "Inicio", "path": "/" },
+        { "label": "Farmacia", "path": "/" },
+        { "label": "Antibióticos" }
+      ],
+      "priceRegular": 42.0,
+      "shortDescription": "Antibacteriano mucolítico en cápsulas. Presentación caja con 100 cápsulas.",
+      "thumbnail": "/images/071462L.jpg",
+      "primaryPresentationLabel": "Caja",
+      "packBadge": "CAJA 100 UN",
+      "accordionSections": [
+        {
+          "id": "desc",
+          "title": "Descripción larga",
+          "content": "Amoxicilina + Bromhexina NF indicado para infecciones respiratorias con presencia de secreción bronquial."
+        },
+        {
+          "id": "comp",
+          "title": "Composición",
+          "content": "Amoxicilina 500 mg + Bromhexina 8 mg por cápsula."
+        },
+        {
+          "id": "contra",
+          "title": "Contraindicaciones",
+          "content": "Uso bajo indicación médica. No usar en caso de alergia a penicilinas."
+        }
+      ],
+      "images": ["/images/071462L.jpg"],
+      "variants": [
+        {
+          "id": "v-caja-100",
+          "label": "Caja 100 UN",
+          "fromPrice": 42.0,
+          "images": ["/images/071462L.jpg"]
+        }
+      ],
+      "relatedProductIds": ["p1", "p2", "p4", "p6"]
+    }
+  ]
+}
