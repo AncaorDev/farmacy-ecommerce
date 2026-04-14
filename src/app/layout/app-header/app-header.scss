@@ -6,11 +6,11 @@
 .inner {
   max-width: var(--ef-max);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 16px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .logo {
@@ -33,7 +33,7 @@
   align-items: center;
   background: #f5f5f5;
   border-radius: var(--ef-radius-pill);
-  padding: 0.25rem 0.25rem 0.25rem 1rem;
+  padding: 4px 4px 4px 16px;
   max-width: 560px;
   width: 100%;
   margin: 0 auto;
@@ -44,7 +44,7 @@
   border: 0;
   background: transparent;
   font: inherit;
-  font-size: 0.95rem;
+  font-size: 15.2px;
   min-width: 0;
 }
 
@@ -73,13 +73,13 @@
 .cart {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
+  gap: 8px;
+  padding: 8px 12px;
   border-radius: var(--ef-radius);
   background: #e3f2fd;
   color: var(--ef-brand-blue);
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 14.72px;
   text-decoration: none;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .cart-count {
-  min-width: 1.25rem;
+  min-width: 20px;
   text-align: center;
 }
 

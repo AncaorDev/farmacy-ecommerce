@@ -6,16 +6,16 @@
 .list {
   list-style: none;
   margin: 0 auto;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   max-width: var(--ef-max);
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1.25rem;
+  gap: 12px 20px;
 }
 
 .list a {
   color: var(--ef-text-muted);
-  font-size: 0.88rem;
+  font-size: 14.08px;
   text-decoration: none;
 }
 

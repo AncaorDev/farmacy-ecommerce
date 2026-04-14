@@ -1,7 +1,7 @@
 .crumbs {
-  font-size: 0.875rem;
+  font-size: 14px;
   color: var(--ef-text-muted);
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .list {
@@ -11,16 +11,16 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.35rem;
+  gap: 5.6px;
 }
 
 .item {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 5.6px;
 }
 
 .sep {
   color: #aaa;
-  font-size: 0.75rem;
+  font-size: 12px;
 }

@@ -11,7 +11,7 @@
 
 .panel-title {
   margin: 0;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .panel-btn {
@@ -19,7 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.25rem;
+  padding: 16px 20px;
   border: 0;
   background: #fafafa;
   font: inherit;
@@ -33,9 +33,9 @@
 }
 
 .panel-body {
-  padding: 0 1.25rem 1rem;
+  padding: 0 20px 16px;
   color: var(--ef-text-muted);
-  font-size: 0.9375rem;
+  font-size: 15px;
 }
 
 .panel-body p {
@@ -44,6 +44,6 @@
 
 .chev {
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1;
 }

@@ -1,7 +1,7 @@
 .gallery {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 1rem;
+  gap: 16px;
   align-items: start;
 }
 
@@ -12,7 +12,7 @@
 .thumbs {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .thumb {

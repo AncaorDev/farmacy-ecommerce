@@ -14,7 +14,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     .wrap {
       max-width: var(--ef-max);
       margin: 0 auto;
-      padding: 2rem 1rem;
+      padding: 32px 16px;
     }
     .skeleton {
       border-radius: 8px;
@@ -24,11 +24,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     }
     .hero {
       height: 240px;
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
     }
     .line {
-      height: 1rem;
-      margin-bottom: 0.5rem;
+      height: 16px;
+      margin-bottom: 8px;
     }
     .short {
       width: 60%;
